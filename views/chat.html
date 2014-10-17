@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chat</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="JS/ui.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>Simple Chat</h1>
+    </div>
+    <div data-role="content">
+      <h3>Nick Name</h3>
+      <input id="name" />
+      <a data-role="button" href="#chatpage">Start Chat</a>
+    </div>
+  </div>
+  <div data-role="page" id="chatpage">
+    <div data-role="header">
+      <h1>Socket.io Chat</h1>
+    </div>
+    <div data-role="content">
+      <input id="message" />
+      <button>Button</button>
+      <ul id="content" data-role="listview" data-inset="true">
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
