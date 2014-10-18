@@ -10,5 +10,6 @@ $(document).ready(function () {
       name: $('[data-id="nick-name"]').val(),
       message: $('[data-id="message"]').val(),
       date: new Date().toUTCString()});
+    UI.resetInputBox();
   });
 });
