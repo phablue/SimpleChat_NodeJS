@@ -12,6 +12,16 @@
       $('[data-id="contents"]').listview('refresh');
     },
 
+    setDataAttributes: function () {
+      return {  name: this.getValue('[data-id="nick-name"]'),
+                message: this.getValue('[data-id="message"]'),
+                date: new Date().toUTCString()};
+    },
+
+    getValue: function (elementID) {
+      return $(elementID).val();
+    },
+
     resetInputBox: function () {
       $('input').val('');
     }
