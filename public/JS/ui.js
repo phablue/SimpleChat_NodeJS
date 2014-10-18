@@ -10,11 +10,10 @@
 
       $(output).prependTo('[data-id="contents"]');
       $('[data-id="contents"]').listview('refresh');
-    }, 
+    },
 
     resetInputBox: function () {
-      $('[data-id="nick-name"]').val('');
-      $('[data-id="message"]').val('');
+      $('input').val('');
     }
   };
 
