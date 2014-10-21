@@ -13,13 +13,26 @@
     },
 
     setDataAttributes: function () {
-      return {  name: this.getValue('[data-id="nick-name"]'),
+      return {  name: this.userNickNameSetting(),
                 message: this.getValue('[data-id="message"]'),
                 date: new Date().toUTCString()};
     },
 
-    getValue: function (elementID) {
-      return $(elementID).val();
+    userNickNameSetting: function () {
+      if (this.checkHavingNickName()) {
+        return this.getValue('[data-id="nick-name"]');
+      }
+      else {
+        return 'Anonymous';
+      }
+    },
+
+    checkHavingNickName: function () {
+      return this.getValue('[data-id="nick-name"]') != "";
+    },
+
+    getValue: function (element) {
+      return $(element).val();
     },
 
     resetInputBox: function () {

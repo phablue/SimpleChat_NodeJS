@@ -2,7 +2,12 @@ $(document).ready(function () {
   var socket = io.connect();
 
   socket.on('message', function (data) {
-    UI.setContents(data);
+    if (data.message != "") {
+      UI.setContents(data);
+    }
+    else {
+      alert('You should enter message.');
+    };
   });
 
   $('button').click(function () {

@@ -8,7 +8,7 @@ app.use(express.Router());
 app.use(express.static(path.join(__dirname, 'public')));
 
 server.listen(3000, function () {
-  console.log("Server Running at http://127.0.0.1:52273");
+  console.log("Server Running at http://localhost:3000/");
 });
 
 app.get('/', function (req, res) {
